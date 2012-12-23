@@ -28,7 +28,7 @@ class bdPaygateInternalBanking_bdBank_ControllerPublic_Bank extends XFCP_bdPayga
 				// old version of [bd] Banking doesn't emit transaction id
 				// so we have to do a quick check to make sure everything 
 				// works together
-				$transactionId = $transfered['transaction_id'];
+				$transactionId = 'bdbank_' . $transfered['transaction_id'];
 			}
 		}
 		catch (bdBank_Exception $be)
